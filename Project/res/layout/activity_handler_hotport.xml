@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_title" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="热点编号:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_hotsportNO" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:editable="false" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="起火时间:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_start_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="灭火时间:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_stop_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="火灾种类:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <RelativeLayout android:layout_gravity="center" android:id="@id/type_hot" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+                <TextView android:textSize="20.0sp" android:textColor="@color/h2_text_color" android:id="@id/collect_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="点击选择" />
+                <TextView android:background="@drawable/right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="是否熄灭:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <CheckBox android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/checkbox_isquench" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:checked="false" android:button="@null" android:text="已熄灭" android:drawableLeft="@drawable/checkbox_bg" android:drawablePadding="3.0dip" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="情况简报:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_condition" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="过火面积:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_total_area" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:inputType="number" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="过火林地面积:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_forest_area" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:inputType="number" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="过火森林面积:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_injury_area" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:inputType="number" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="其他损失情况:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_other_loss" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="填报单位:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_result_org" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="填报人:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_result_by" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="反馈时间:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_result_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:editable="false" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="记录人:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_record_by" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="所在区县:" android:drawableLeft="@drawable/must_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_region_in" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="热点位置:" android:drawableLeft="@drawable/option_choose_flag" android:drawablePadding="3.0dip" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/edt_hotsport_loc" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        <Button android:id="@id/save" android:text="反馈" style="@style/save_bt1" />
+    </LinearLayout>
+</ScrollView>

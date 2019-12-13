@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/more_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:id="@id/add_new" android:background="@drawable/bg_fangda" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/lxr_03" android:layout_weight="1.0" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="添加好友" android:layout_weight="2.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/new_group" android:background="@drawable/bg_suoxiao" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/more_19" android:layout_weight="1.0" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="新建组" android:layout_weight="2.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/new_crowd" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/more_20" android:layout_weight="1.0" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="新建群" android:layout_weight="2.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="10.0dip" android:layout_height="5.0dip" />
+</LinearLayout>

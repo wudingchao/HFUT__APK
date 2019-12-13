@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/head_img" android:layout_width="0.0dip" android:layout_height="50.0dip" android:src="@drawable/audio_user_head" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_marginLeft="8.0dip" android:layout_weight="4.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_weight="1.0">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="组名" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="小黄毛" />
+            <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="的群" />
+            <TextView android:layout_gravity="center_vertical" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="20.0dip" android:text="帐号:" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/user_name" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="\ 18555246548" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

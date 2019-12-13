@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/audio_activity_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/layout_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/title" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/dialogUserHead" android:background="@drawable/audio_touxiang_bg" android:padding="10.0dip" android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@drawable/audio_defaut_img" />
+        <TextView android:textSize="14.0sp" android:layout_gravity="center_horizontal" android:id="@id/textViewDialogUser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="未命名未命名" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_below="@id/linearLayout1">
+        <Chronometer android:textStyle="bold" android:id="@id/sendactivity_chronometer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接收来电..." android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="18.0sp" android:id="@id/sendactivity_chronometertextview" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接收来电..." android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/framlayout" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/linear" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_centerVertical="true">
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/answer" android:background="@drawable/audio_jieting_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/audio_jieting" />
+                <TextView android:textSize="15.0sp" android:textColor="@android:color/black" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="接听" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/refuse" android:background="@drawable/audio_jujue_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_weight="1.0">
+                <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/audio_jujue" />
+                <TextView android:textSize="15.0sp" android:textColor="@android:color/black" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="拒绝" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llDialogHF" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <ImageView android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/audio_mianti" />
+            <TextView android:textSize="15.0sp" android:id="@id/buttonDialogHF" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="免提" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/buttonDialogFinish" android:background="@null" android:visibility="invisible" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip">
+            <ImageButton android:textColor="#ffffffff" android:background="@null" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/audio_guaduan_bg" android:scaleType="centerInside" />
+            <ImageView android:background="@null" android:padding="5.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/audio_shape" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llDialogMute" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <ImageView android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/audio_jingyin" />
+            <TextView android:textSize="15.0sp" android:id="@id/buttonDialogMute" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="静音" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="20.0sp" android:textColor="@color/red" android:gravity="center" android:id="@id/txt_notification" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="中心要求立即上传视频！" android:layout_above="@id/framlayout" />
+</RelativeLayout>

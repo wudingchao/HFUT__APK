@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.jeek.calendar.widget.calendar.WeekBarView android:background="@color/calendar_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/week_bar_height" app:week_text_size="@integer/calendar_text_size" />
+        <com.jeek.calendar.widget.calendar.month.MonthCalendarView android:id="@id/mcvCalendar" android:background="@color/calendar_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/month_calendar_height" android:overScrollMode="never" app:month_selected_circle_color="@color/select_circle_color" app:month_holiday_color="@color/holiday_text_color" app:month_day_text_size="@integer/calendar_text_size" app:month_show_task_hint="true" app:month_show_lunar="true" app:month_show_holiday_hint="true" />
+    </LinearLayout>
+</LinearLayout>

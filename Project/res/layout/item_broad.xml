@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="5.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/checkbox_add" android:background="@null" android:padding="10.0dip" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:drawableLeft="@drawable/checkbox_bg" />
+    <ImageView android:id="@id/head_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mp3" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip">
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/broad_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="火警警告" android:singleLine="true" />
+            <ImageView android:id="@id/btn_play" android:background="@drawable/broad_music" android:focusable="false" android:layout_width="15.0sp" android:layout_height="15.0sp" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/broad_period_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="播放时段:0:0:0-23:59:59" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center|right" android:id="@id/broad_file_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="大小:13kb" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

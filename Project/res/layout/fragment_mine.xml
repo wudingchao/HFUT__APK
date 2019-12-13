@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/more_bg1" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_alignParentTop="true" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <FrameLayout android:layout_width="50.0dip" android:layout_height="50.0dip">
+                    <ImageView android:id="@id/image_head" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/more_head" android:adjustViewBounds="true" />
+                    <ImageView android:layout_gravity="bottom|center|right" android:id="@id/image_status" android:layout_width="20.0dip" android:layout_height="20.0dip" android:adjustViewBounds="true" />
+                </FrameLayout>
+                <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/btn_login" android:background="@null" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <Button android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="登录/注册" android:alpha="0.4" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="登录/注册" />
+                <SurfaceView android:id="@id/quiet_camera" android:layout_width="1.0sp" android:layout_height="1.0sp" />
+            </FrameLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+                <Button android:textColor="@color/white" android:id="@id/bt_checkhistory" android:background="@drawable/ll_checkin_his_shape" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡历史" android:drawableLeft="@mipmap/checkin_his" android:drawablePadding="7.0dip" />
+                <Button android:textColor="@color/white" android:layout_gravity="right" android:id="@id/bt_log" android:background="@drawable/ll_log_shape" android:paddingLeft="30.0dip" android:paddingTop="9.0dip" android:paddingRight="15.0dip" android:paddingBottom="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日志" android:drawableLeft="@mipmap/log" android:drawablePadding="7.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/lay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_daka" android:background="@drawable/bg_tran_huise" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageButton android:id="@id/chaxun" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_02" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_daohang" android:background="@drawable/bg_tran_huise" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageButton android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dh_08" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导航" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_huojing" android:background="@drawable/bg_tran_huise" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageButton android:id="@id/daohang" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_huojing" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="火警" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_sos" android:background="@drawable/bg_tran_huise" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageButton android:id="@id/sos" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sos" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SOS求救" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.example.hpdemo.view.ScrollExpandListView android:id="@id/expandable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:childDivider="@color/listview_footer" android:divider="@color/listview_footer" android:dividerHeight="5.0dip" android:headerDividersEnabled="true" android:footerDividersEnabled="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

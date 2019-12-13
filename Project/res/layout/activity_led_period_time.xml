@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <TextView android:gravity="center_vertical" android:id="@id/start_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="开始时间:0:0" android:drawableBottom="@drawable/line" android:drawableRight="@drawable/right" android:drawablePadding="10.0dip" />
+    <TextView android:gravity="center_vertical" android:id="@id/stop_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="结束时间:0:0" android:drawableBottom="@drawable/line" android:drawableRight="@drawable/right" android:drawablePadding="10.0dip" />
+    <Button android:id="@id/save" android:text="保存" style="@style/save_bt1" />
+</LinearLayout>

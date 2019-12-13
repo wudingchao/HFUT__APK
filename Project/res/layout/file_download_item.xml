@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_weight="3.0">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/tv_filesize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="00M" android:layout_toRightOf="@id/tv_title" />
+            <TextView android:id="@id/tv_precent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/pb_pro" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="2.0dip" android:max="100" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/download_contrll" android:layout_width="0.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.5" android:layout_alignParentRight="true">
+        <Button android:id="@id/ib_download_status" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#ffcccccc" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:id="@id/bt_delete" android:background="@null" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="删除" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

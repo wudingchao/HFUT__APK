@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_title" />
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/huise" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/rl_info" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/h1_text_color" android:text="@string/log_text" android:layout_centerVertical="true" style="@style/tv_must_choose" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/tv_log_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2017-6-30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <EditText android:gravity="top" android:id="@id/et_log" android:background="@drawable/log_edittext_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/rl_info" />
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/tv_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍摄照片:" android:layout_centerVertical="true" />
+                    <Button android:id="@id/picture_taken" android:background="@drawable/bg_camera_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/tv_2" android:layout_centerVertical="true" />
+                    <Button android:id="@id/picture_add" android:background="@drawable/bt_add_pic" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/picture_taken" android:layout_centerVertical="true" />
+                    <ImageButton android:id="@id/bt_edit_pic" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edit_pic" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <com.example.hpdemo.view.ScrollGridView android:layout_gravity="center" android:id="@id/grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:numColumns="4" />
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频录入:" />
+                    <Button android:textColor="#ff727272" android:gravity="center" android:id="@id/recordvideo" android:background="@drawable/bg_video_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:minHeight="0.0dip" />
+                    <RelativeLayout android:id="@id/ll_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <Button android:id="@id/video_delete" android:background="@drawable/delete" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:layout_gravity="center_horizontal" android:id="@id/preview" android:layout_width="110.0dip" android:layout_height="110.0dip" android:src="@drawable/screenshot_1" />
+                                <ImageView android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/videoplay" android:layout_centerInParent="true" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/bt_save" android:layout_marginBottom="15.0dip" android:text="保存" style="@style/save_bt1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

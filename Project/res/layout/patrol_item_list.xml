@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.hpdemo.view.ProcessImageView android:id="@id/img" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_margin="1.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    <Button android:id="@id/bt_delete_picture" android:background="@drawable/smart_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

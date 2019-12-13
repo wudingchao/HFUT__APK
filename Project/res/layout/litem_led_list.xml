@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/checkbox_add" android:background="@null" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:checked="false" android:button="@null" android:drawableLeft="@drawable/checkbox_bg" />
+    <ImageView android:id="@id/head_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/led_icon" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip">
+        <TextView android:textColor="@color/black" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/led_name" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="LED1" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/led_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="前方有监控，请离开" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

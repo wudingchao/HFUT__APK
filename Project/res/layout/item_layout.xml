@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.hpdemo.view.ProcessImageView android:id="@id/item_icon" android:background="@drawable/audio_user_head" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="9.0dip" android:layout_centerVertical="true" />
+    <Button android:id="@id/bt_delete" android:background="@drawable/delete" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginRight="9.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="58.0dip" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/bt_delete" android:layout_centerVertical="true">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/recorder_length" android:layout_width="120.0dip" android:layout_height="40.0dip">
+            <ImageView android:background="@drawable/audio_box_bg_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/id_recorder_anim" android:background="@drawable/adj" android:layout_width="18.0dip" android:layout_height="25.0dip" android:layout_marginLeft="13.0dip" />
+        </FrameLayout>
+        <TextView android:textColor="#ff777777" android:layout_gravity="center_vertical" android:id="@id/recorder_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="3" />
+    </LinearLayout>
+</RelativeLayout>

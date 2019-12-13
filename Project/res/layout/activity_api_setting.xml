@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="20.0dip">
+        <TextView android:text="地址" style="@style/tv_key1" />
+        <EditText android:id="@id/et_url" android:singleLine="true" style="@style/edit_style" />
+    </LinearLayout>
+    <View android:background="@drawable/prefresh_list_cutline" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip">
+        <TextView android:text="端口" style="@style/tv_key1" />
+        <EditText android:id="@id/et_port" android:singleLine="true" style="@style/edit_style" />
+    </LinearLayout>
+    <Button android:id="@id/save" android:text="保存" style="@style/save_bt1" />
+</LinearLayout>

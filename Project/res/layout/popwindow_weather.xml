@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/button_back" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip">
+        <Button android:textSize="20.0sp" android:textColor="#ff5084fe" android:gravity="center" android:id="@id/weather_real_time" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="实时气象" />
+        <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:textSize="20.0sp" android:textColor="#ff5084fe" android:layout_gravity="center" android:id="@id/weather_hostorical" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="历史气象" />
+        <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:textSize="20.0sp" android:textColor="#ff5084fe" android:layout_gravity="center" android:id="@id/exit" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="退出" />
+    </LinearLayout>
+</LinearLayout>

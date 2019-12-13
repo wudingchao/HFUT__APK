@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_title" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="控制器" />
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="在线状态" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/tv_online_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="~~" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <Button android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/restart_mode0" android:background="@color/huise" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="复位重启" />
+        <Button android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/restart_mode1" android:background="@color/huise" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="断电重启" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="摄像机" />
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电源开关" />
+            <com.example.hpdemo.view.SlideSwitchView android:id="@id/btn_camera_power" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:background="@color/huise" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="LED" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/tv_led_set" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="LED设置" android:drawableRight="@drawable/right" />
+        <View android:background="@color/huise" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电源开关" />
+            <com.example.hpdemo.view.SlideSwitchView android:id="@id/btn_led_power" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="气象" />
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:id="@id/tv_weather_set" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="设置气象阀值" android:drawableRight="@drawable/right" />
+        </RelativeLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电源开关" />
+            <com.example.hpdemo.view.SlideSwitchView android:id="@id/btn_weather_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

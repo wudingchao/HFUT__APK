@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/lay_title" layout="@layout/layout_title" />
+    <RelativeLayout android:id="@id/rl_delete" android:background="@color/white" android:padding="8.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:id="@id/tv_delete_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已选择0条" android:layout_centerVertical="true" />
+        <Button android:textColor="@color/white" android:gravity="center|left" android:id="@id/bt_delete" android:background="@drawable/bg_red_selector" android:paddingLeft="25.0dip" android:layout_width="100.0dip" android:layout_height="38.0dip" android:text="删除" android:drawableLeft="@drawable/btn_delete" android:drawablePadding="3.0dip" android:layout_alignParentRight="true" />
+        <Button android:textColor="@color/white" android:gravity="center|left" android:id="@id/bt_play" android:background="@drawable/bg_lan_selector" android:paddingLeft="25.0dip" android:layout_width="100.0dip" android:layout_height="38.0dip" android:layout_marginRight="5.0dip" android:text="播放" android:drawableLeft="@drawable/btn_play" android:drawablePadding="3.0dip" android:layout_toLeftOf="@id/bt_delete" />
+    </RelativeLayout>
+    <Button android:textColor="@color/white" android:id="@id/btn_real_broad" android:background="@drawable/button_sure" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="实时广播" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ListView android:id="@id/broad_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/rl_delete" android:layout_below="@id/lay_title" />
+</RelativeLayout>

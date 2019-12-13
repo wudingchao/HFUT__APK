@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/layout_title" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:gravity="center_vertical" android:background="@color/huise" android:paddingLeft="9.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="基本信息" />
+                <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/h2_text_color" android:layout_gravity="center" android:text="资源位置:" style="@style/tv_must_choose" />
+                    <RelativeLayout android:layout_gravity="center" android:id="@id/select_location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                        <Button android:layout_gravity="center" android:id="@id/btn_img" android:background="@drawable/patrol_location" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:id="@id/tx" android:background="@drawable/right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                        <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="点击定位" android:singleLine="true" android:layout_toLeftOf="@id/tx" android:layout_toRightOf="@id/btn_img" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/h2_text_color" android:layout_gravity="center" android:text="资源类型:" style="@style/tv_must_choose" />
+                    <RelativeLayout android:layout_gravity="center" android:id="@id/type_patrol" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/collect_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="点击选择" />
+                        <TextView android:background="@drawable/right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/h2_text_color" android:layout_gravity="center" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="资源名称:" style="@style/tv_must_choose" />
+                    <EditText android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/collect_address" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+                </LinearLayout>
+                <View android:background="@color/huise" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:layout_gravity="center" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="采集时间:" />
+                    <EditText android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/collect_time" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="时间" />
+                </LinearLayout>
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:layout_gravity="center" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="资源备注:" android:drawableLeft="@drawable/option_choose_flag" android:drawablePadding="3.0dip" />
+                    <EditText android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/patrol_remark" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="备注" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/h1_text_color" android:gravity="center_vertical" android:background="@color/huise" android:paddingLeft="9.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="语音图片" />
+                <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="语音录入:" />
+                    <com.example.hpdemo.audioMedia.AudioRecordButton android:textColor="#ff727272" android:gravity="center" android:id="@id/recordbutton" android:background="@drawable/bg_audio_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:minHeight="0.0dip" />
+                </LinearLayout>
+                <com.example.hpdemo.view.ScrollListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:dividerHeight="1.0dip" />
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/h2_text_color" android:id="@id/tv_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍摄照片:" android:layout_centerVertical="true" />
+                    <Button android:id="@id/picture_taken" android:background="@drawable/bg_camera_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/tv_2" android:layout_centerVertical="true" />
+                    <Button android:id="@id/picture_add" android:background="@drawable/bt_add_pic" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/picture_taken" android:layout_centerVertical="true" />
+                    <Button android:id="@id/bt_edit_pic" android:background="@drawable/edit_pic" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <com.example.hpdemo.view.ScrollGridView android:layout_gravity="center" android:id="@id/grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:numColumns="4" />
+                <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                <Button android:id="@id/save" android:text="保存" style="@style/save_bt1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

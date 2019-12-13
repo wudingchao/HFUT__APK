@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:textColor="@color/return_title_text_color" android:gravity="center" android:id="@id/tv_turn" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/tv_no_return" android:layout_weight="1.0" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/h1_text_color" android:gravity="center" android:id="@id/tv_turned" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/info_dialog_returned" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/cursor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/a" android:scaleType="matrix" />
+    <View android:id="@id/view1" android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/pager_home" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.hpdemo" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <permission android:name="android.permission.SENSOR_ENABLE" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="dangerous"/>
+    <permission android:name="android.permission.SENSOR_INFO" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY"/>
+    <uses-permission android:name="android.permission.CAMERA">
+        <uses-feature android:name="android.hardware.camera"/>
+        <uses-feature android:name="android.hardware.camera.autofocus"/>
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.stub.StubApp" android:persistent="true" android:qihoo="activity" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="com.example.hpdemo.WelcomeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.hpdemo.pic.ImageGridActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.TestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.PatrolFoundActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AudioTalkbackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentBayonet" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentAlarm" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ParamSetting" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentRecordParam" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentVideoFile" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentBackVideo" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentBayonetBroad" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.LEDSetting" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentBayonetInformation" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentLED" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentLivePreview" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentQuery" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentWeather" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentWeatherAlarm" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.ServerSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.LoginActivity" android:screenOrientation="portrait" android:theme="@style/ActivitySlideTheme"/>
+        <activity android:name="com.example.hpdemo.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CollectRoadActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.EndCollectRoadActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.HotSpotCheckActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.RangingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SupervisoryControlActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.TongbuActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.NavigateActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FireAlarmActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SosActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.EndFireCollectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SmallCollectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ResourceTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ResourceCollectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CollectQueryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SystemSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.TestSiteActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.VedioPlayBackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.RoadTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.PatrolTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AlarmPictureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CreateGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.Test2Activity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.HotspotActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.HandlerHotportActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ResetPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SetDefaultChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ScanPictureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.FragmentCameraSetActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CameraSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.BayonetRecordParamActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.GetScreenshotParamActivity" android:screenOrientation="portrait"/>
+        <service android:name="com.example.hpdemo.service.MTResponse"/>
+        <service android:name="com.example.hpdemo.service.DownLoadService"/>
+        <receiver android:name="com.example.hpdemo.receiver.NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.example.hpdemo.activity.UserManagementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddOrUpdateUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.BayonetSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.GetScreenshotTimeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.resetRecordParamActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.recordSaveTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.JurisdictionTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.UnattendedTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.GpsManagmentActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddorUpdateGpsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.HistoryWeatherActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.seekBarSpeedActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.LedPeriodTimeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.LedIntoTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_info_position" android:name="com.example.hpdemo.activity.InfoPositionActivity"/>
+        <activity android:name="com.example.hpdemo.activity.HistoryWeatherParamActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ChatActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.GroupUserInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddUserToGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddFriendList" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.LinkChatActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.LEDSetShowActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.BroadManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.BroadSetShowActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_weather_alarm_detail" android:name="com.example.hpdemo.activity.WeatherAlarmDetailActivity"/>
+        <activity android:label="@string/title_activity_hot_classify_main" android:name="com.example.hpdemo.activity.HotClassifyActivity"/>
+        <activity android:label="@string/title_activity_road_collect_list" android:name="com.example.hpdemo.activity.RoadCollectListActivity"/>
+        <activity android:name="com.example.hpdemo.activity.CollectPositionActivity"/>
+        <activity android:label="@string/title_activity_small_collect_list" android:name="com.example.hpdemo.SmallCollectListActivity"/>
+        <activity android:label="@string/title_activity_fire_collect_list" android:name="com.example.hpdemo.activity.FireCollectListActivity"/>
+        <activity android:label="@string/title_activity_fire_collect_list" android:name="com.example.hpdemo.activity.UserChatInfoActivity"/>
+        <activity android:label="@string/title_activity_synchronize" android:name="com.example.hpdemo.activity.SynchronizeActivity"/>
+        <activity android:label="@string/title_activity_patrol_found_list" android:name="com.example.hpdemo.activity.PatrolFoundListActivity"/>
+        <activity android:label="@string/title_activity_resource_collect_list" android:name="com.example.hpdemo.activity.ResourceCollectListActivity"/>
+        <activity android:label="@string/title_activity_dynamic_resource_type" android:name="com.example.hpdemo.activity.DynamicResourceTypeActivity"/>
+        <activity android:name="com.example.hpdemo.activity.SiteInformationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.GetBroadcasuAudioFileActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_my_info" android:name="com.example.hpdemo.activity.MyInfoActivity"/>
+        <activity android:label="@string/title_activity_my_info" android:name="com.example.hpdemo.activity.SetGpsUploadTimeActivity"/>
+        <activity android:label="@string/title_activity_dealed_info" android:name="com.example.hpdemo.activity.DealedInfoActivity"/>
+        <activity android:label="@string/title_activity_my_info_no_deal_status" android:name="com.example.hpdemo.activity.MyInfoNoDealStatusActivity"/>
+        <activity android:name="com.example.hpdemo.activity.VideoBrowsingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CameraSetActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CameraInformationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddBayonetCameraActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_road_level" android:name="com.example.hpdemo.RoadLevelActivity"/>
+        <activity android:name="com.example.hpdemo.activity.AddBayonetDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CameraConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_fire_type" android:name="com.example.hpdemo.activity.FireTypeActivity"/>
+        <activity android:name="com.example.hpdemo.activity.MapDownloadListActivity"/>
+        <activity android:name="com.example.hpdemo.activity.DownloadActivity"/>
+        <activity android:name="com.example.hpdemo.activity.DefaultMapDownloadSetActivity"/>
+        <activity android:name="com.example.hpdemo.activity.MapSettingActivity"/>
+        <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="mkrhfrYc8jlwxfGO0pGxWOOcmwwkohEP"/>
+        <activity android:name="com.example.hpdemo.activity.RegionSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.CheckInAndLogActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.AddorUpdateLogActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.ApiSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.VideoRecordingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.PreviewActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.VideoRecording2Activity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.VideoTestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.TraceShowActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.hpdemo.activity.SetOffLineActivity"/>
+        <activity android:name="com.example.hpdemo.activity.MapUrlSetActivity"/>
+    </application>
+</manifest>

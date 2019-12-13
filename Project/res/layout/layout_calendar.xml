@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jeek.calendar.widget.calendar.WeekBarView android:background="@color/calendar_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/week_bar_height" app:week_text_size="@integer/calendar_text_size" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rlMonthCalendar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.jeek.calendar.widget.calendar.month.MonthCalendarView android:id="@id/mcvCalendar" android:background="@color/calendar_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/month_calendar_height" android:overScrollMode="never" app:month_selected_circle_color="@color/select_circle_color" app:month_holiday_color="@color/holiday_text_color" app:month_day_text_size="@integer/calendar_text_size" app:month_show_task_hint="true" app:month_show_lunar="true" app:month_show_holiday_hint="true" />
+            </RelativeLayout>
+            <com.jeek.calendar.widget.calendar.week.WeekCalendarView android:id="@id/wcvCalendar" android:background="@color/calendar_bg_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/week_calendar_height" android:overScrollMode="never" app:week_selected_circle_color="@color/select_circle_color" app:week_holiday_color="@color/holiday_text_color" app:week_day_text_size="@integer/calendar_text_size" app:week_show_task_hint="true" app:week_show_lunar="true" app:week_show_holiday_hint="true" />
+        </RelativeLayout>
+        <TextView android:textSize="20.0sp" android:gravity="center" android:id="@id/current_data" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+        <RelativeLayout android:id="@id/rlScheduleList" android:background="@color/colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.jeek.calendar.widget.calendar.schedule.ScheduleRecyclerView android:orientation="vertical" android:id="@id/rvScheduleList" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:overScrollMode="never" android:layout_alignParentStart="true" />
+            <RelativeLayout android:id="@id/rlNoTask" android:background="@color/colorBackground" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="20.0sp" android:textColor="@color/h2_text_color" android:id="@id/tv_nolog_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="@string/no_log_text" android:layout_centerHorizontal="true" />
+                <Button android:id="@id/bt_add_log" android:background="@drawable/bt_log_add_selector" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/tv_nolog_text" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="vertical" android:id="@id/rl_havelog" android:background="@color/colorBackground" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/rl_info" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/log_text" android:layout_centerVertical="true" />
+                    <TextView android:id="@id/tv_log_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2017-6-30" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:gravity="top" android:id="@id/tv_log" android:background="@drawable/log_edittext_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bt_save" android:layout_below="@id/rl_info" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:padding="3.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip">
+        <ImageView android:id="@id/iv_head" android:background="@drawable/road_collect_head" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_margin="3.0dip" />
+        <ImageView android:id="@id/iv_isupload" android:background="@drawable/isupload_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip">
+        <ImageView android:id="@id/iv_position" android:background="@drawable/bg_tran_huise" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/collect_position_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/isDelete" android:background="@null" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:button="@null" android:drawableLeft="@drawable/user_delete_checkbox_bg_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/iv_position" android:layout_centerVertical="true">
+            <TextView android:id="@id/tv_collect_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="道路采集1" />
+            <TextView android:id="@id/collect_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="类型: 小车道     2016-12-16 11:47:43" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

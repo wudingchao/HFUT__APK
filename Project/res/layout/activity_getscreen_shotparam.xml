@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <TextView android:gravity="center_vertical" android:id="@id/pic_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="抓图时间:" android:drawableBottom="@drawable/line" android:drawableRight="@drawable/right" android:drawablePadding="10.0dip" />
+    <TextView android:gravity="center_vertical" android:id="@id/pic_quality" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="抓图质量:" android:drawableBottom="@drawable/line" android:drawableRight="@drawable/right" android:drawablePadding="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:background="@drawable/screenshot_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0" />
+        <ImageView android:background="@drawable/screenshot_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0" />
+        <ImageView android:background="@drawable/screenshot_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.example.hpdemo.view.MyRadioGroup android:orientation="horizontal" android:id="@id/group_show" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <com.example.hpdemo.view.DrawableCenterRadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/quality_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="最好" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        <com.example.hpdemo.view.DrawableCenterRadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/quality_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="较好" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        <com.example.hpdemo.view.DrawableCenterRadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/quality_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="一般" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+    </com.example.hpdemo.view.MyRadioGroup>
+    <Button android:id="@id/sure" android:text="确定" style="@style/save_bt1" />
+</LinearLayout>

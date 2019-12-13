@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="vertical" android:id="@id/tab_information" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/information" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/h_43_active" />
+            <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="消息" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="right" android:id="@id/news" android:background="@drawable/h_red" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" />
+    </FrameLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/tab_contacks" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/contacks" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/h_40_active" />
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="巡护" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@null" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/bayonet" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:layout_gravity="center_horizontal" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom|center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/tab_control" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/control" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/control2" />
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="监控" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom|center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/tab_mine" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/mine" android:background="#00000000" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/p7_35" />
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更多" />
+    </LinearLayout>
+</LinearLayout>

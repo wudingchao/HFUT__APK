@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:panel="http://schemas.android.com/apk/res-auto">
+    <com.example.hpdemo.view.Panel android:gravity="bottom" android:layout_gravity="left" android:id="@id/leftPanel1" android:layout_width="fill_parent" android:layout_height="fill_parent" panel:animationDuration="300" panel:position="bottom" panel:handle="@id/panelHandle" panel:content="@id/panelContent" panel:linearFlying="true" panel:openedHandle="@drawable/bottom_switcher_expanded_background" panel:closedHandle="@drawable/bottom_switcher_collapsed_background">
+        <Button android:layout_gravity="center" android:id="@id/panelHandle" android:layout_width="wrap_content" android:layout_height="33.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/panelContent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView android:id="@id/app_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.example.hpdemo.view.Panel>
+</LinearLayout>

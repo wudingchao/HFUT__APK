@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="19.0sp" android:layout_gravity="center" android:id="@id/param_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录像计划" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="是否录像：" />
+        <TextView android:id="@id/param_record" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="是否录像" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录像延迟：" />
+        <TextView android:id="@id/param_record_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="录像延迟" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="预录时间：" />
+        <TextView android:id="@id/param_pre_record_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="预录时间" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="类型：" />
+        <TextView android:id="@id/param_record_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="类型" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始小时：" />
+        <TextView android:id="@id/param_start_hour" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="开始小时" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始分钟：" />
+        <TextView android:id="@id/param_start_min" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="开始分钟" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结束小时：" />
+        <TextView android:id="@id/param_stop_hour" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="结束小时" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结束分钟：" />
+        <TextView android:id="@id/param_stop_min" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="结束分钟" />
+    </LinearLayout>
+    <Button android:id="@id/btn_param_exit" android:background="#ffff0000" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="退出" />
+</LinearLayout>

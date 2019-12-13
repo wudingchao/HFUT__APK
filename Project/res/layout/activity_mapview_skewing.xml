@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="离线地图偏移(米)" />
+        <LinearLayout android:background="@android:drawable/edit_text" android:addStatesFromChildren="true" android:layout_width="220.0dip" android:layout_height="45.0dip" android:layout_marginTop="0.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:text="x:" />
+            <EditText android:textSize="15.0sp" android:id="@id/off_x" android:background="@null" android:layout_width="150.0dip" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" android:digits=".0123456789" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:background="@android:drawable/edit_text" android:addStatesFromChildren="true" android:layout_width="220.0dip" android:layout_height="45.0dip" android:layout_marginTop="0.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:text="y:" />
+            <EditText android:textSize="15.0sp" android:id="@id/off_y" android:background="@null" android:layout_width="150.0dip" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" android:digits=".0123456789" android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="在线地图偏移(米)" />
+        <LinearLayout android:background="@android:drawable/edit_text" android:addStatesFromChildren="true" android:layout_width="220.0dip" android:layout_height="45.0dip" android:layout_marginTop="0.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:text="x:" />
+            <EditText android:textSize="15.0sp" android:id="@id/on_x" android:background="@null" android:layout_width="150.0dip" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" android:digits=".0123456789" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:background="@android:drawable/edit_text" android:addStatesFromChildren="true" android:layout_width="220.0dip" android:layout_height="45.0dip" android:layout_marginTop="0.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:text="y:" />
+            <EditText android:textSize="15.0sp" android:id="@id/on_y" android:background="@null" android:layout_width="150.0dip" android:layout_height="30.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" android:digits=".0123456789" android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/save" android:background="@color/blue" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="保存" />
+    </LinearLayout>
+</LinearLayout>

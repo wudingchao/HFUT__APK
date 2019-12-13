@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/window_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_pavement" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="人行道" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_roadway" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="车行道" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/cursor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/a" android:scaleType="matrix" />
+    <RelativeLayout android:background="#ffffffff" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <ImageView android:id="@id/img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/p22_03" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/img">
+            <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="起点位置:" />
+                <RelativeLayout android:layout_gravity="center" android:id="@id/select_location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                    <Button android:layout_gravity="center" android:id="@id/btn_img" android:background="@drawable/patrol_location" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="点击选择" android:layout_toRightOf="@id/btn_img" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/window_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/layoutBottom" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="终点位置:" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" />
+</LinearLayout>

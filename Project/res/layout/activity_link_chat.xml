@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/lay_title" layout="@layout/layout_title" />
+    <RelativeLayout android:id="@id/rl_bottom" android:background="@drawable/chat_bottom_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:gravity="center_vertical" android:id="@id/ivPopUp" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="70.0dip" android:src="@drawable/chatting_setmode_voice_btn" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/add_picture" android:background="@null" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/add" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/btn_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/add_picture" android:layout_toRightOf="@id/ivPopUp" android:layout_centerVertical="true">
+            <Button android:textSize="15.0sp" android:id="@id/btn_send" android:background="@drawable/chat_send_btn" android:layout_width="50.0dip" android:layout_height="30.0dip" android:layout_marginRight="5.0dip" android:text="发送" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <EditText android:textSize="15.0sp" android:id="@id/et_sendmessage" android:background="@drawable/login_edit_normal" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:singleLine="true" android:layout_toLeftOf="@id/btn_send" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.example.hpdemo.audioMedia.AudioRecordButtonChat android:gravity="center" android:id="@id/btn_record" android:background="@drawable/audio_bg" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/add_picture" android:layout_toRightOf="@id/ivPopUp" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/ivPhone" android:background="@drawable/phone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginBottom="-30.0dip" android:layout_above="@id/rl_bottom" android:layout_alignParentLeft="true" />
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stackFromBottom="true" android:cacheColorHint="#00000000" android:divider="@null" android:layout_above="@id/ivPhone" android:layout_below="@id/lay_title" />
+    <LinearLayout android:gravity="center" android:id="@id/rcChat_popup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/voice_rcd_hint_window" />
+    </LinearLayout>
+</RelativeLayout>

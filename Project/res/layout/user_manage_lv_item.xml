@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_head" android:layout_width="58.0dip" android:layout_height="58.0dip" android:layout_margin="6.0dip" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:layout_toRightOf="@id/iv_head" android:layout_centerVertical="true">
+        <TextView android:textColor="@color/name_color" android:layout_gravity="center_vertical" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+            <TextView android:textColor="@color/user_defalut_color" android:gravity="center" android:id="@id/user_ID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ID: 123" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/user_defalut_color" android:gravity="center" android:id="@id/tv_user_channlID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="默认通道:3" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/user_defalut_color" android:gravity="center|left" android:id="@id/tv_user_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="5.0dip" android:text="用户名: Hellw" android:layout_toLeftOf="@id/tv_user_channlID" android:layout_toRightOf="@id/user_ID" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <CheckBox android:id="@id/isDelete" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:button="@null" android:drawableLeft="@drawable/user_delete_checkbox_bg_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

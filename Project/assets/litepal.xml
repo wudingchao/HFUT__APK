@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+
+	数据库版本说明 @author GuoW 
+	phone 18323037899
+	版本号		修改内容			备注
+	1		初始版本			初始版本
+	2		道路采集关联			
+	3		新增火场采集(FireCollection)表	
+	4		修改小班采集表
+	5		资源信息新增备注字段
+	6		新增基站数据表
+	7		新增获取基站数量count
+	9		新增热点报警
+	10		热点编号修改
+	11		用户信息表修改
+	12		新增群组聊天记录本地数据库
+	13		修改群组聊天记录表
+	14		新增卡口信息表
+	15		新增LED显示信息
+	16		LED显示信息新增设备ID字段
+	17		道路采集表修改
+	18		采集点信息表修改
+	19
+	20
+	21
+	22              新增热点反馈消息表	
+	23      	AudioFileInfo PatrolFoundInfo ResourceCollectInfo
+	24		新增单人聊天信息表
+	24
+	26     ResourceCollectInfo resource_type int 变为 String
+	27		新增卡欧表和摄像机表(关联)
+	28		新增卡口摄像机ID
+	29      新增道路采集  一个字符型的道路级别
+	30      基站表新增设备id和父设备id
+	31      巡护发现添加视频
+	32      新增巡护轨迹
+	37      巡护发现轨迹资源采集添加userid字段，新增登录用户表
+	39      修改登录用户表
+	40      更新巡护gps信息表添加巡护类型
+	41      删除巡护gps信息表的巡护类型，道路采集火场采集信息添加userid
+	42      资源采集添加视频
+	43      道路采集火场采集与点的对应关系修改
+ -->
+<litepal>
+
+    <dbname value = "demo"></dbname>
+    <version value="43"></version>
+
+    <list>
+
+        <mapping class="com.example.hpdemo.db.Block"></mapping>
+        <mapping class="com.example.hpdemo.db.CollectionPoint"></mapping>
+        <mapping class="com.example.hpdemo.db.FileInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.HotspotInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.InformationCollection"></mapping>
+        <mapping class="com.example.hpdemo.db.PatrolDiscover"></mapping>
+        <mapping class="com.example.hpdemo.db.PatrolLog"></mapping>
+        <mapping class="com.example.hpdemo.db.ResourceInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.UserInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.FireCollection"></mapping>
+        <mapping class="com.example.hpdemo.db.SiteInformation"></mapping>
+        <mapping class="com.example.hpdemo.db.HotspotAlarmInfor"></mapping>
+        <mapping class="com.example.hpdemo.db.GroupChatInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.BayonetInformation"></mapping>
+        <mapping class="com.example.hpdemo.db.LedShowInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.HotReturnInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.SaveUserMsgContent"></mapping>
+        <mapping class="com.example.hpdemo.db.AudioFileInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.ImageFileInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.PatrolFoundInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.ResourceCollectInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.ResourceType"></mapping>
+        <mapping class="com.example.hpdemo.db.BayonetInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.CameraInfo"></mapping>
+        <mapping class="com.example.hpdemo.db.PatrolGpsinfo"></mapping>
+        <mapping class="com.example.hpdemo.db.LoginInfo"></mapping>
+    </list>
+
+</litepal>

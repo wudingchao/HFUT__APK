@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <TextView android:textSize="15.0sp" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="存储类型" />
+    <com.example.hpdemo.view.MyRadioGroup android:orientation="vertical" android:id="@id/group2" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/save_type1" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="定时录像" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/save_type2" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="移动侦测" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/save_type3" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="报警触发" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+    </com.example.hpdemo.view.MyRadioGroup>
+    <Button android:id="@id/btn_sure" android:text="确定" style="@style/save_bt1" />
+</LinearLayout>

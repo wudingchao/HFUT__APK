@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_title" />
+        <com.example.hpdemo.view.MyRadioGroup android:orientation="vertical" android:id="@id/group_bhzy" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_cyh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="草原火" android:layout_weight="1.0" />
+                <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_jhsc" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="计划烧除" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_lh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="林火" android:layout_weight="1.0" />
+                <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_nyh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="农用火" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_ls" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="炼山" android:layout_weight="1.0" />
+                <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_gmh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="灌木火" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_gkyh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="工矿用火" android:layout_weight="1.0" />
+                <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_jwyh" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="境外火" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_weizhaodao" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="未找到" android:layout_weight="1.0" />
+                <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_hechazhong" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="核查中" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_other" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="其它" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <Button android:id="@id/btn_sure" android:text="确定" style="@style/save_bt1" />
+        </com.example.hpdemo.view.MyRadioGroup>
+    </LinearLayout>
+</ScrollView>

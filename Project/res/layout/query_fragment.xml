@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/alarm_update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="报警查询" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/vedio_update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录像查询" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/cursor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/a" android:scaleType="matrix" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/calendarCenter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_centerHorizontal="true" style="@style/main_bar_text_style" />
+        <ImageButton android:id="@id/calendarLeft" android:background="@null" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_month_left" android:layout_alignParentLeft="true" android:contentDescription="@null" />
+        <ImageButton android:id="@id/calendarRight" android:background="@null" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_month_right" android:layout_alignParentRight="true" android:contentDescription="@null" />
+        <com.example.hpdemo.utils.CalendarView android:id="@id/calendar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/calendarCenter" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/viewpager" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

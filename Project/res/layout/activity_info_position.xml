@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.esri.android.map.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_select" android:background="@color/black" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" android:alpha="0.6">
+            <Button android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/xuanze" android:background="@drawable/tongbu_bt_bg" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择" />
+            <Button android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/shanchu" android:background="@drawable/tongbu_bt_bg" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_control" android:background="@color/black" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="0.6">
+            <ImageButton android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/up" android:background="@drawable/tongbu_bt_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/up" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/left" android:background="@drawable/tongbu_bt_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/left" />
+                <ImageButton android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/done" android:background="@drawable/tongbu_bt_bg" android:visibility="invisible" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/main_ptz_control_apply_d" />
+                <ImageButton android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/right" android:background="@drawable/tongbu_bt_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/right1" />
+            </LinearLayout>
+            <ImageButton android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/bottom" android:background="@drawable/tongbu_bt_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/bottom" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

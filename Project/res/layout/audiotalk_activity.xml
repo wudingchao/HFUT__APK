@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/audio_activity_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/layout_title" />
+    <ImageView android:id="@id/dialogUserHead" android:layout_width="166.0dip" android:layout_height="166.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/audio_people" android:layout_below="@id/title" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/dialogUserHead">
+        <Chronometer android:textStyle="bold" android:id="@id/sendactivity_chronometer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在呼叫..." android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="28.0sp" android:textColor="#ff585858" android:id="@id/sendactivity_chronometertextview" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在呼叫..." android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llDialogHF" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <ImageView android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/audio_mianti" />
+            <TextView android:textSize="15.0sp" android:id="@id/buttonDialogHF" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="免提" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/buttonDialogFinish" android:background="@null" android:visibility="invisible" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip">
+            <ImageButton android:textColor="#ffffffff" android:background="@null" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/audio_guaduan_bg" android:scaleType="centerInside" />
+            <ImageView android:background="@null" android:padding="5.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/audio_shape" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llDialogMute" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <ImageView android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/audio_jingyin" />
+            <TextView android:textSize="15.0sp" android:id="@id/buttonDialogMute" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="静音" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <TextView android:textSize="18.0sp" android:textColor="#ff585858" android:gravity="center_horizontal" android:id="@id/textViewDialogUser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="未命名未命名" />
+    </LinearLayout>
+</RelativeLayout>

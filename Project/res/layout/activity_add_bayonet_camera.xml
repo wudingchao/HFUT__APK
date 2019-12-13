@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/layout_title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/image_bayonet" android:layout_width="fill_parent" android:layout_height="100.0dip" android:src="@drawable/jk_29" />
+            </LinearLayout>
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <LinearLayout style="@style/bryonet_info_tx_style">
+                    <TextView android:text="名称 :" style="@style/tv_must_choose1" />
+                </LinearLayout>
+                <EditText android:id="@id/edt_camera_name" android:hint="请输入摄像机名称" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <LinearLayout style="@style/bryonet_info_tx_style">
+                    <TextView android:text="IP :" style="@style/tv_must_choose1" />
+                </LinearLayout>
+                <EditText android:id="@id/edt_ip" android:hint="请输入IP" android:digits=".0123456789" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <LinearLayout style="@style/bryonet_info_tx_style">
+                    <TextView android:text="端口 :" style="@style/tv_must_choose1" />
+                </LinearLayout>
+                <EditText android:id="@id/edt_port" android:hint="请输入端口" android:inputType="number" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <LinearLayout style="@style/bryonet_info_tx_style">
+                    <TextView android:text="登录用户名 :" style="@style/tv_must_choose1" />
+                </LinearLayout>
+                <EditText android:id="@id/edt_user_name" android:hint="请输入登录用户名" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <LinearLayout style="@style/bryonet_info_tx_style">
+                    <TextView android:text="登录密码 :" style="@style/tv_must_choose1" />
+                </LinearLayout>
+                <EditText android:id="@id/edt_password" android:hint="请输入登录密码" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout style="@style/bryonet_info_ll_style">
+                <TextView android:text="云台类型 :" style="@style/bryonet_info_tx_style" />
+                <EditText android:id="@id/edt_ptz_type" android:hint="请输入云台类型" android:inputType="number" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip" style="@style/bryonet_info_ll_style">
+                <TextView android:text="云台解码器地址 :" style="@style/bryonet_info_tx_style" />
+                <EditText android:id="@id/edt_ptz_address" android:hint="请输入云台类型" android:inputType="number" style="@style/bryonet_info_et_style" />
+            </LinearLayout>
+            <View style="@style/bryonet_info_interval_style" />
+            <Button android:id="@id/alter" android:text="添加" style="@style/save_bt1" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

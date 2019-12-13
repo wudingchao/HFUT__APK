@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="#ff727272" android:gravity="center" android:id="@id/recordButton" android:background="@drawable/button_recordnormal" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="10.0dip" android:minHeight="0.0dip" android:text="@string/normal" android:layout_alignParentBottom="true" />
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/recordButton" />
+    <ListView android:id="@id/linkman_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/recordButton" />
+</RelativeLayout>

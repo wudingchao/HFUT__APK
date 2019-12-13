@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="220.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="21.0sp" android:layout_gravity="center_horizontal" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_deal_site_alram" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/bt_stop_alarm" android:background="@drawable/dialog_bg_button" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="@string/stop_alarm" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/bt_suspect_alarm" android:background="@drawable/dialog_bg_button" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:text="@string/suspect_alarm" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/bt_confirm_alarm" android:background="@drawable/dialog_bg_button" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:text="@string/confirm_alarm" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/bt_cancel" android:background="@drawable/dialog_bg_button" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:text="@string/cancel" />
+</LinearLayout>

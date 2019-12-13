@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/title" android:background="@color/blue" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/btn_title_right" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/btn_title_left" android:background="@drawable/top_left_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="返回" android:lines="1" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="19.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/tv_top_title" android:layout_width="127.0dip" android:layout_height="wrap_content" android:text="卡口广播" android:lines="1" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/azure" />
+</LinearLayout>

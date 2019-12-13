@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <com.example.hpdemo.view.MyRadioGroup android:orientation="vertical" android:id="@id/group_bhzy" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_someone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/someone" />
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RadioButton android:textSize="15.0sp" android:textColor="@color/hint" android:id="@id/btn_unmanned" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unmanned" />
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/btn_sure" android:text="确定" style="@style/save_bt1" />
+    </com.example.hpdemo.view.MyRadioGroup>
+</LinearLayout>

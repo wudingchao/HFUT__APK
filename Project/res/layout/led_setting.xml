@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/title" android:background="@color/blue" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/led_OK" android:background="@drawable/top_right_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="确定" android:lines="1" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/led_back" android:background="@drawable/top_left_button" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回" android:lines="1" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="19.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/led_tv" android:layout_width="127.0dip" android:layout_height="wrap_content" android:text="LED显示配置" android:lines="1" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="显示内容：" />
+                <EditText android:id="@id/led_showText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="显示内容" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="持续时间：" />
+                <EditText android:id="@id/led_durationTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="持续时间" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="显示时间段：" />
+                <EditText android:id="@id/led_period_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="开始时间" android:editable="false" android:layout_weight="1.0" />
+                <EditText android:id="@id/led_period_stop_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="结束时间" android:editable="false" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="X坐标：" />
+                <EditText android:id="@id/led_X" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="X坐标" android:digits=".0123456789" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="Y坐标：" />
+                <EditText android:id="@id/led_Y" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Y坐标" android:digits=".0123456789" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="宽度：" />
+                <EditText android:id="@id/led_width" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="宽度" android:digits=".0123456789" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="高度：" />
+                <EditText android:id="@id/led_height" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="高度" android:digits=".0123456789" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="进入方式：" />
+                <EditText android:id="@id/led_intoType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="选择进入方式" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="播放速度：" />
+                <EditText android:id="@id/led_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="1-255" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <TextView android:textColor="#ff5084fe" android:background="@null" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="是否显示：" />
+                <EditText android:id="@id/led_show" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="是否显示" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/t1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="基站:" android:layout_centerVertical="true" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/name_bayonet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="测试卡口" android:layout_toRightOf="@id/t1" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/p14_03" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="基站编号:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/id_bayonet" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="18" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="可视范围:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/area_sea" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="位置:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/lacation" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="129.5214, 29.1521" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="高程:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/height" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="塔高:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/height_site" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="192.168.2.188" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="地址:" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/black" android:id="@id/address" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="北京市中南海" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_shipin" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lay_shipin1" android:background="@drawable/bg_huise" android:padding="5.0dip" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/jk_01" />
+            <TextView android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/shipin1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="防火" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lay_shipin2" android:background="@drawable/bg_huise" android:padding="5.0dip" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/jk_01" />
+            <TextView android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/shipin2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="防盗" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lay_shipin3" android:background="@drawable/bg_huise" android:padding="5.0dip" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/jk_01" />
+            <TextView android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/shipin3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热成像" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

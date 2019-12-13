@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/update_dialog_bg" android:layout_width="240.0dip" android:layout_height="180.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="#ff000000" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="7.0dip" android:text="更新标题" android:singleLine="true" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="4.0dip">
+        <TextView android:textColor="@color/h1_text_color" android:id="@id/tv_des1" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="修复了已知的bug." android:singleLine="true" android:drawableLeft="@drawable/gift_tip_point" android:drawablePadding="6.0dip" />
+        <TextView android:textColor="@color/h1_text_color" android:id="@id/tv_des2" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="新增了部分功能." android:singleLine="true" android:drawableLeft="@drawable/gift_tip_point" android:drawablePadding="6.0dip" />
+        <TextView android:textColor="@color/h1_text_color" android:id="@id/tv_des3" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="业务逻辑上的分离." android:singleLine="true" android:drawableLeft="@drawable/gift_tip_point" android:drawablePadding="6.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip">
+        <Button android:id="@id/bt_cancel" android:background="@drawable/bg_tran_huise" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bt_after_say" android:layout_weight="1.0" />
+        <Button android:id="@id/bt_update" android:background="@drawable/bg_tran_huise" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:text="@string/bt_updateing" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <com.example.hpdemo.view.MyRadioGroup android:orientation="vertical" android:id="@id/group" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="2秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" />
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="3秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" />
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="5秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="10秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" />
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="30秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            <View android:background="@color/huise" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" />
+            <RadioButton android:textSize="20.0sp" android:textColor="@color/hint" android:id="@id/btn_time6" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="60秒" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </com.example.hpdemo.view.MyRadioGroup>
+</LinearLayout>

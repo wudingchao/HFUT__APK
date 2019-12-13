@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/lay_title" layout="@layout/layout_title" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_margin="10.0dip">
+        <EditText android:id="@id/contacts_search" android:background="@drawable/edt_01" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="30.0dip" android:hint="搜索" android:layout_weight="9.0" />
+        <Button android:id="@id/searchBtn" android:background="@drawable/edt_02" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:text="搜索" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <RelativeLayout android:id="@id/lay1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/img1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_11" android:layout_centerHorizontal="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="联系人" android:layout_below="@id/img1" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/lay2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/img2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_10" android:layout_centerHorizontal="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="管理中心" android:layout_below="@id/img2" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/lay3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/img3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_12" android:layout_centerHorizontal="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="组对讲" android:layout_below="@id/img3" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/view1" android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="5.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/pager_home" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

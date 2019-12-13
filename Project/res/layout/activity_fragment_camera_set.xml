@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/layout_title" />
+        <TextView android:textSize="15.0sp" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="叠加文本" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="文本内容 : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_text" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入叠加文本名称" android:layout_weight="5.0" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="文本位置(X) : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_location_x" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入数字" android:layout_weight="5.0" android:inputType="number" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="文本位置(Y) : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_location_y" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入数字" android:layout_weight="5.0" android:inputType="number" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="是否显示 : " android:layout_weight="2.0" />
+            <com.example.hpdemo.view.MyRadioGroup android:orientation="horizontal" android:id="@id/group_show" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0">
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/show" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="是" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/not_show" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="否" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            </com.example.hpdemo.view.MyRadioGroup>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="显示星期 : " android:layout_weight="2.0" />
+            <com.example.hpdemo.view.MyRadioGroup android:orientation="horizontal" android:id="@id/group_show_week" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0">
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/show_week" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="是" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/not_show_week" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="否" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            </com.example.hpdemo.view.MyRadioGroup>
+        </LinearLayout>
+        <TextView android:textSize="15.0sp" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="叠加日期" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="日期类型 : " android:layout_weight="2.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/lay_date_type" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textSize="13.0sp" android:id="@id/tv_date_type" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="2022-12-1" android:layout_weight="4.0" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/right" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="日期位置(X) : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_date_x" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入数字" android:layout_weight="5.0" android:inputType="number" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="日期位置(Y) : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_date_y" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入数字" android:layout_weight="5.0" android:inputType="number" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="是否显示 : " android:layout_weight="2.0" />
+            <com.example.hpdemo.view.MyRadioGroup android:orientation="horizontal" android:id="@id/group_show_date" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0">
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/show_date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="是" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+                <RadioButton android:textSize="14.0sp" android:textColor="@color/hint" android:id="@id/not_show_date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="否" android:drawableLeft="@drawable/btn_radio_free" android:drawablePadding="5.0dip" android:layout_weight="1.0" />
+            </com.example.hpdemo.view.MyRadioGroup>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:textSize="15.0sp" android:background="@color/huise" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="图像质量" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="分辨率 : " android:layout_weight="2.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/lay_resolution" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textSize="13.0sp" android:id="@id/tv_resolution" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="320*240" android:layout_weight="4.0" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/right" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="码率类型 : " android:layout_weight="2.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/lay_code_type" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textSize="13.0sp" android:id="@id/tv_code_type" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="自动" android:layout_weight="4.0" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/right" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="帧率 : " android:layout_weight="2.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/lay_fps" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textSize="13.0sp" android:id="@id/tv_fps" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="25" android:layout_weight="4.0" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/right" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/hint" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="码率 : " android:layout_weight="2.0" />
+            <EditText android:textSize="13.0sp" android:id="@id/edt_code_rate" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入数字,单位为KB" android:layout_weight="5.0" android:inputType="number" />
+        </LinearLayout>
+        <View android:background="@color/hint" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/save" android:text="保存" style="@style/save_bt1" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

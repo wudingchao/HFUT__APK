@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_title" />
+    <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/rg_tab_home" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:text="基站" android:drawableTop="@drawable/nullbg" style="@style/rb_home" />
+        <View android:background="#ffa4a4a4" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <RadioButton android:text="环境监控" android:drawableTop="@drawable/nullbg" style="@style/rb_home" />
+    </RadioGroup>
+    <View android:id="@id/view1" android:background="#ffd8d8d8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="5.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/pager_ListHome" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>
