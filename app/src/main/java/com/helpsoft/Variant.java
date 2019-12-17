@@ -1,12 +1,17 @@
 package com.helpsoft;
 
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Variant {
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+import okio.BufferedSink;
+
+public class Variant  {
     public static final byte V_BOOL = 3;
 
     public static final byte V_BYTEARRAY = 20;
@@ -63,6 +68,13 @@ public class Variant {
 
     public Variant() {
         this.m_type = 1;
+    }
+
+
+
+
+    public void writeTo(BufferedSink sink) throws IOException {
+
     }
 
     public Variant(double paramDouble) {
@@ -154,6 +166,7 @@ public class Variant {
             this.m_map = new LinkedHashMap<String, Variant>();
         this.m_map.put(paramString1, new Variant(paramString2));
     }
+
 
     public void addValue(String paramString, boolean paramBoolean) {
         this.m_type = 19;

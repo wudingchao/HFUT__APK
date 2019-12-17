@@ -120,6 +120,7 @@ public class HPAndroidSdkJni extends com.helpsoft.HPAndroidCallback {
         /*if (!com.helpsoft.Variant.VariantToBuffer(paramVariant, byteBuffer))
             return false;
         byteBuffer.flip();*/
+        byteBuffer.flip();
         return sendCommand(paramInt, paramString, byteBuffer.array(), byteBuffer.remaining());
     }
 

@@ -1,1 +1,1 @@
-include ':app', ':moban', ':mytest', ':sample-okhttp', ':okhttputils'
+include ':app', ':moban', ':mytest', ':sample-okhttp', ':okhttputils', ':socket', ':jdbcsql'

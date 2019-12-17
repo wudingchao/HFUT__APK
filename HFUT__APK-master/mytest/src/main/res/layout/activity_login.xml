@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/login_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/linear" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linear_image" android:layout_width="fill_parent" android:layout_height="110.0dip"
+        android:layout_marginTop="50.0dip" android:layout_below="@id/linear">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/image_user" android:layout_width="100.0dip"
+            android:layout_height="100.0dip" android:src="@drawable/last" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_user"
+        android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/linear_image">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/p19_07" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:background="@null" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text=":" />
+        <RelativeLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <EditText android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/edt_user" android:background="@null" android:paddingLeft="14.0dip" android:focusable="true" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cursorVisible="true" android:singleLine="true" android:textCursorDrawable="@drawable/color_cursor" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/linear_user" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/linear_user">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/p19_11" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:background="@null" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text=":" />
+        <EditText android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/edt_password" android:background="@null" android:paddingLeft="14.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cursorVisible="true" android:singleLine="true" android:inputType="textPassword" android:textCursorDrawable="@drawable/color_cursor" />
+    </LinearLayout>
+    <View android:id="@id/gab" android:background="@color/huise" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/linear_password" />
+    <RelativeLayout android:id="@id/server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/gab">
+        <CheckBox android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/checkbox_remember_password" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:text="记住密码" android:drawableLeft="@drawable/checkbox_bg" android:drawablePadding="4.0dip" android:layout_centerVertical="true" />
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/btn_server" android:background="@drawable/login_reg_button" android:paddingLeft="8.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="服务器地址" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <Button android:textSize="20.0sp" android:textColor="@color/blue" android:id="@id/login" android:background="@drawable/bg_bt_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="登录" android:layout_below="@id/server" />
+    <Button android:textSize="20.0sp" android:textColor="@color/blue" android:id="@id/login_offline" android:background="@drawable/bg_bt_login_offline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="离线登录" android:layout_below="@id/login" />
+    <RelativeLayout android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/login">
+        <TextView android:textColor="@color/white" android:id="@id/forget_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:text="忘记密码" />
+        <TextView android:textColor="@color/white" android:id="@id/register" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="立即注册" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

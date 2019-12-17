@@ -1,241 +1,150 @@
 package com.example.hpdemo;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
+import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
-
-import com.example.hpdemo.activity.BaseActivity;
-import com.example.hpdemo.service.MTResponse;
-import com.helpsoft.HPAndroidCommandCallback;
-import com.helpsoft.HPAndroidConnectionCallback;
 import com.helpsoft.Variant;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import static com.helpsoft.HPAndroidSdkJni.connectServer;
-import static com.helpsoft.HPAndroidSdkJni.sendCommand;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener , HPAndroidCommandCallback, HPAndroidConnectionCallback {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
-    private String TAG;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+import static com.example.hpdemo.R2.id.password;
+import static com.example.hpdemo.R2.id.username;
+
+public class LoginActivity extends AppCompatActivity {
+    @BindView(R.id.username)
+    EditText mEtxtUsername;
+    @BindView(R.id.password)
+    EditText mEtxtPassword;
+
+    @BindView(R.id.loading)
+    ProgressBar loading;
+    @BindView(R.id.container)
+    ConstraintLayout container;
+
+
+
+    private OkHttpClient httpClient;
+
+    private Map<String, Variant> m_map = null;
+    private byte m_type = (byte)1;
+
+
+    public void addValue(String paramString, int paramInt) {
+        this.m_type = (byte)19;
+        if (this.m_map == null)
+            this.m_map = new LinkedHashMap<String, Variant>();
+        this.m_map.put(paramString, new Variant(paramInt));
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+        httpClient = new OkHttpClient();
+        Button login = findViewById(R.id.login2);
+        login.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        initUI();
-    }
+                Toast.makeText(LoginActivity.this,"你点击了",Toast.LENGTH_SHORT).show();
 
-    private Handler mHandler = new Handler() {
-        public void handleMessage(Message param1Message) {
-            Intent intent;
-            switch (param1Message.what) {
-                default:
-                    return;
-                case 3:
-                    Log.i(TAG, LoginActivity.this + "LOGIN_SUCCESS");
-                    removeMessages(3);
-                    intent = new Intent((Context)LoginActivity.this, MTResponse.class);
-                    LoginActivity.this.startService(intent);
-                   /* if (LoginActivity.this.mLoadingDialog != null)
-                        LoginActivity.this.mLoadingDialog.dismiss();
-                    LoginActivity.this.getUserInfo(1);*/
-                    intent = new Intent((Context)LoginActivity.this, MainActivity.class);
-                    LoginActivity.this.startActivity(intent);
-                    return;
-                case 5:
-                    /*if (LoginActivity.this.mLoadingDialog != null) {
-                        LoginActivity.this.mLoadingDialog.dismiss();
-                        return;
-                    }*/
-                case 4:
-                    //LoginActivity.this.img.startAnimation(LoginActivity.this.reverse);
-                    return;
-                case 6:
-                    LoginActivity.this.finish();
-                    return;
-                case 7:
-                    /*if (!LoginActivity.this.isNetworkAvailable()) {
-                        LoginActivity.this.showOffLoginDialog();
-                        return;
-                    }*/
-                case 100:
-                    break;
+                String username = mEtxtUsername.getText().toString().trim();
+                String password = mEtxtPassword.getText().toString().trim();
+
+              /*  Variant variant = new Variant();
+                variant.addValue("USER_NAME", username);
+                variant.addValue("PASSWORD", password);
+                variant.addValue("TYPE", "PHONE");*/
+                loginWithForm(username,password);
             }
-            //Toast((Context)LoginActivity.this, "��������");
-            Toast.makeText(LoginActivity.this,"login success",Toast.LENGTH_SHORT).show();
-        }
-    };
-    private static final String CMDTAG = "AA";
+        });
 
 
-    private String username2;
-    private String userpassword2;
 
-    private CheckBox m_rememberPasswordCheckBox;
-
-
-    private SharedPreferences m_spf;
-
-    private String port;
-
-    private TextView register;
-
-    private Animation reverse;
-
-    //private LoginInfo selectLogininfo;
-    private Button login;
-
-    private Button server;
-
-    private Button login_offline;
-
-
-    private String ip;
-
-    private String userName;
-
-    private String userPassword;
-
-    private ImageView user_image;
-
-    private EditText user_name;
-
-    private EditText user_password;
-    private TextView forgetPassword;
-    private LinearLayout linear_password;
-
-
-    public static native boolean sendCommand ( int paramInt1, String paramString,
-                                               byte[] paramArrayOfbyte, int paramInt2);
-
-    public static boolean sendCommand ( int paramInt, String paramString, Variant paramVariant){
-        ByteBuffer byteBuffer = ByteBuffer.allocate(1048576);
-        if (!Variant.VariantToBuffer(paramVariant, byteBuffer))
-            return false;
-        byteBuffer.flip();
-        return sendCommand(paramInt, paramString, byteBuffer.array(), byteBuffer.remaining());
     }
 
 
-    private boolean m_b = false;
+    private void loginWithForm(String username ,String password) {
 
-    public boolean getBoolValue () {
-        return this.m_b;
-    }
-
-    public byte getType () {
-        return this.m_type;
-    }
-
-    private byte m_type = 1;
+        String url = "http://192.168.1.252:8066";
 
 
+        RequestBody body =new FormBody.Builder()
+                .add("CmdType","TransactionId")
+                .add("loginactivity","Object")
+                .add("USER_NAME",username)
+                .add("PASSWORD",password)
+                .add("TYPE","PHONE")
+                .build();
 
-    private void initUI() {
 
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        httpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.d("LoginActivity", "服务器出差: ");
 
-        this.user_image =  findViewById(R.id.image_user);
-        this.user_name =  findViewById(R.id.edt_user);
-        this.user_password = findViewById(R.id.edt_password);
-        this.forgetPassword =  findViewById(R.id.forget_password);
-        this.linear_password =  findViewById(R.id.linear_password);
-        this.login_offline =  findViewById(R.id.login_offline);
-        this.register =  findViewById(R.id.register);
+            }
 
-        this.m_rememberPasswordCheckBox =  findViewById(R.id.checkbox_remember_password);
-        this.server =  findViewById(R.id.btn_server);
-        server.setOnClickListener(this);
-        this.login =  findViewById(R.id.login);
-        login.setOnClickListener(this);
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if(response.isSuccessful()){
+                    String json = response.body().string();
+                    try {
+                        JSONObject jsonObject = new JSONObject(json);
 
-    }
+                       final String message = jsonObject.optString("message");
+                        final int success = jsonObject.optInt("success");
 
-    @Override
-    public void onClick(View v) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(success==1)
+                                    Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                                    else
+                                        Toast.makeText(LoginActivity.this,message,Toast.LENGTH_SHORT).show();
 
-        switch (v.getId()) {
-            case R.id.btn_server:
-                Intent intent = new Intent();
-                intent.setClass(getApplicationContext(),ServerSettingActivity.class);
-                startActivity(intent);
-                return;
-            case R.id.login:
+                            }
+                        });
 
-                Bundle bundle = getIntent().getExtras();
-
-                this.ip = bundle.getString("HELPMT_SERVER_IP", null);
-                this.port = bundle.getString("HELPMT_SERVER_PORT", null);
-                this.username2 = this.user_name.getText().toString();
-                this.userpassword2 = this.user_password.getText().toString();
-                if (this.m_rememberPasswordCheckBox.isChecked()) {
-                    SharedPreferences.Editor editor = this.m_spf.edit();
-                    m_spf = getApplicationContext().getSharedPreferences("hpdemo.example.com", 0);
-                    editor.putString("loginusername", this.username2);
-                    editor.putString("loginuserpassword", this.userpassword2);
-                    editor.commit();
-                } else {
-                    SharedPreferences.Editor editor = this.m_spf.edit();
-                    editor.putString("loginusername", "");
-                    editor.putString("loginuserpassword", "");
-                    editor.commit();
+                }catch (JSONException e){
+                       // e.printStackTrace();
+                    }
                 }
-                connectServer(this.ip, Integer.valueOf(this.port).intValue());
-                return;
-            case R.id.login_offline:
-                break;
-        }
 
-    }
-
-    public void onConnect() {
-        Variant variant = new Variant();
-        variant.addValue("USER_NAME", this.username2);
-        variant.addValue("PASSWORD", this.userpassword2);
-        variant.addValue("TYPE", "PHONE");
-        sendCommand(10001, CMDTAG, variant);
-    }
-
-    @Override
-    public void onConnectError() {
-
-    }
-
-    @Override
-    public void onDisconnect() {
-
-    }
-
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, this + "onStop");
-    }
-
-    @Override
-    public void onCommand(int paramInt, String paramString, Variant paramVariant) {
-
+            }
+        });
     }
 }
